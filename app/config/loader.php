@@ -1,9 +1,6 @@
 <?php
-declare(strict_types = 1);
 
-use Phalcon\Loader;
-
-$loader = new Loader();
+$loader = new \Phalcon\Loader();
 
 /**
  * We're a registering a set of directories taken from the configuration file
@@ -11,6 +8,6 @@ $loader = new Loader();
 $loader->registerDirs(
     [
         $config->application->controllersDir,
-        $config->application->modelsDir,
+        $config->application->modelsDir
     ]
 )->register();
