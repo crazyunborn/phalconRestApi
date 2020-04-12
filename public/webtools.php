@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 
 /**
  * This file is part of the Phalcon Developer Tools.
@@ -21,13 +20,11 @@ include PTOOLSPATH . '/bootstrap/autoload.php';
 /**
  * @psalm-suppress UndefinedConstant
  */
-$bootstrap = new Bootstrap(
-    [
-        'ptools_path' => PTOOLSPATH,
-        'ptools_ip'   => PTOOLS_IP,
-        'base_path'   => BASE_PATH,
-    ]
-);
+$bootstrap = new Bootstrap([
+    'ptools_path' => PTOOLSPATH,
+    'ptools_ip'   => PTOOLS_IP,
+    'base_path'   => BASE_PATH,
+]);
 
 if (APPLICATION_ENV === ENV_TESTING) {
     return $bootstrap->run();

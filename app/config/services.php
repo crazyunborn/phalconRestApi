@@ -16,7 +16,7 @@ use Phalcon\Url as UrlResolver;
  */
 $di->setShared(
     'config',
-    static function () {
+    function () {
         return include APP_PATH . '/config/config.php';
     }
 );
